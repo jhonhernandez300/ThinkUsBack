@@ -1,0 +1,6 @@
+@ThinkUs_HostAddress = http://localhost:5084
+
+GET {{ThinkUs_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
