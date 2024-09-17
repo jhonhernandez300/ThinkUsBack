@@ -41,7 +41,7 @@ namespace ThinkUs.Controllers
         }
 
         // POST: api/employees
-        [HttpPost]
+        [HttpPost("CreateEmployee")]
         public async Task<ActionResult<Employee>> CreateEmployee(Employee employee)
         {
             if (ModelState.IsValid)
@@ -85,19 +85,19 @@ namespace ThinkUs.Controllers
         }
 
         // DELETE: api/employees/5
-        [HttpDelete("{id}")]
+        [HttpDelete("DeleteEmployee/{id}")]
         public async Task<IActionResult> DeleteEmployee(int id)
         {
             var employee = await _unitOfWork.Employees.GetByIdAsync(id);
             if (employee == null)
             {
-                return NotFound();
+                return NotFound(new {message = "Employee not found with that id"});
             }
 
             await _unitOfWork.Employees.DeleteAsync(id);
             await _unitOfWork.CompleteAsync();
 
-            return NoContent();
+            return Ok(new { message = "Employee deleted" });
         }
     }
 }

@@ -1,3 +1,11 @@
+C:\Users\jhon\OneDrive\Documentos\Pruebas empresas\ThinkUs\backend\ThinkUs\obj\Debug\net8.0\ThinkUs.csproj.AssemblyReference.cache
+C:\Users\jhon\OneDrive\Documentos\Pruebas empresas\ThinkUs\backend\ThinkUs\obj\Debug\net8.0\ThinkUs.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\jhon\OneDrive\Documentos\Pruebas empresas\ThinkUs\backend\ThinkUs\obj\Debug\net8.0\ThinkUs.AssemblyInfoInputs.cache
+C:\Users\jhon\OneDrive\Documentos\Pruebas empresas\ThinkUs\backend\ThinkUs\obj\Debug\net8.0\ThinkUs.AssemblyInfo.cs
+C:\Users\jhon\OneDrive\Documentos\Pruebas empresas\ThinkUs\backend\ThinkUs\obj\Debug\net8.0\ThinkUs.csproj.CoreCompileInputs.cache
+C:\Users\jhon\OneDrive\Documentos\Pruebas empresas\ThinkUs\backend\ThinkUs\obj\Debug\net8.0\ThinkUs.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\jhon\OneDrive\Documentos\Pruebas empresas\ThinkUs\backend\ThinkUs\obj\Debug\net8.0\ThinkUs.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\jhon\OneDrive\Documentos\Pruebas empresas\ThinkUs\backend\ThinkUs\obj\Debug\net8.0\ThinkUs.sourcelink.json
 C:\Users\jhon\OneDrive\Documentos\Pruebas empresas\ThinkUs\backend\ThinkUs\bin\Debug\net8.0\appsettings.Development.json
 C:\Users\jhon\OneDrive\Documentos\Pruebas empresas\ThinkUs\backend\ThinkUs\bin\Debug\net8.0\appsettings.json
 C:\Users\jhon\OneDrive\Documentos\Pruebas empresas\ThinkUs\backend\ThinkUs\bin\Debug\net8.0\ThinkUs.exe
@@ -114,13 +122,6 @@ C:\Users\jhon\OneDrive\Documentos\Pruebas empresas\ThinkUs\backend\ThinkUs\bin\D
 C:\Users\jhon\OneDrive\Documentos\Pruebas empresas\ThinkUs\backend\ThinkUs\bin\Debug\net8.0\runtimes\win\lib\net6.0\System.Runtime.Caching.dll
 C:\Users\jhon\OneDrive\Documentos\Pruebas empresas\ThinkUs\backend\ThinkUs\bin\Debug\net8.0\runtimes\win\lib\net6.0\System.Security.Cryptography.ProtectedData.dll
 C:\Users\jhon\OneDrive\Documentos\Pruebas empresas\ThinkUs\backend\ThinkUs\bin\Debug\net8.0\runtimes\win\lib\net6.0\System.Windows.Extensions.dll
-C:\Users\jhon\OneDrive\Documentos\Pruebas empresas\ThinkUs\backend\ThinkUs\obj\Debug\net8.0\ThinkUs.csproj.AssemblyReference.cache
-C:\Users\jhon\OneDrive\Documentos\Pruebas empresas\ThinkUs\backend\ThinkUs\obj\Debug\net8.0\ThinkUs.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\jhon\OneDrive\Documentos\Pruebas empresas\ThinkUs\backend\ThinkUs\obj\Debug\net8.0\ThinkUs.AssemblyInfoInputs.cache
-C:\Users\jhon\OneDrive\Documentos\Pruebas empresas\ThinkUs\backend\ThinkUs\obj\Debug\net8.0\ThinkUs.AssemblyInfo.cs
-C:\Users\jhon\OneDrive\Documentos\Pruebas empresas\ThinkUs\backend\ThinkUs\obj\Debug\net8.0\ThinkUs.csproj.CoreCompileInputs.cache
-C:\Users\jhon\OneDrive\Documentos\Pruebas empresas\ThinkUs\backend\ThinkUs\obj\Debug\net8.0\ThinkUs.MvcApplicationPartsAssemblyInfo.cs
-C:\Users\jhon\OneDrive\Documentos\Pruebas empresas\ThinkUs\backend\ThinkUs\obj\Debug\net8.0\ThinkUs.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\jhon\OneDrive\Documentos\Pruebas empresas\ThinkUs\backend\ThinkUs\obj\Debug\net8.0\staticwebassets.build.json
 C:\Users\jhon\OneDrive\Documentos\Pruebas empresas\ThinkUs\backend\ThinkUs\obj\Debug\net8.0\staticwebassets.development.json
 C:\Users\jhon\OneDrive\Documentos\Pruebas empresas\ThinkUs\backend\ThinkUs\obj\Debug\net8.0\staticwebassets\msbuild.ThinkUs.Microsoft.AspNetCore.StaticWebAssets.props

@@ -1,8 +1,29 @@
 [
   {
     "ContainingType": "ThinkUs.Controllers.EmployeesController",
+    "Method": "UpdateEmployee",
+    "RelativePath": "api/Employees/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "employee",
+        "Type": "ThinkUs.Models.Employee",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ThinkUs.Controllers.EmployeesController",
     "Method": "CreateEmployee",
-    "RelativePath": "api/Employees",
+    "RelativePath": "api/Employees/CreateEmployee",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
@@ -27,29 +48,8 @@
   },
   {
     "ContainingType": "ThinkUs.Controllers.EmployeesController",
-    "Method": "UpdateEmployee",
-    "RelativePath": "api/Employees/{id}",
-    "HttpMethod": "PUT",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "id",
-        "Type": "System.Int32",
-        "IsRequired": true
-      },
-      {
-        "Name": "employee",
-        "Type": "ThinkUs.Models.Employee",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "ThinkUs.Controllers.EmployeesController",
     "Method": "DeleteEmployee",
-    "RelativePath": "api/Employees/{id}",
+    "RelativePath": "api/Employees/DeleteEmployee/{id}",
     "HttpMethod": "DELETE",
     "IsController": true,
     "Order": 0,
@@ -107,6 +107,16 @@
         "StatusCode": 200
       }
     ]
+  },
+  {
+    "ContainingType": "ThinkUs.Controllers.RolesController",
+    "Method": "GetAllRoles",
+    "RelativePath": "api/Roles/GetAllRoles",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
   },
   {
     "ContainingType": "ThinkUs.Controllers.WeatherForecastController",

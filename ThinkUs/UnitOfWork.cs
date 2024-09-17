@@ -18,6 +18,11 @@ namespace ThinkUs
         public IRepository<Employee> Employees { get; private set; }
         public IRepository<Role> Roles { get; private set; }
 
+        public async Task<IEnumerable<Role>> GetAllRolesAsync()
+        {
+            return await Roles.GetAllAsync();
+        }
+
         public async Task<int> CompleteAsync()
         {
             return await _context.SaveChangesAsync();

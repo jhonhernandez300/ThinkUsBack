@@ -6,6 +6,7 @@ namespace ThinkUs.Interfaces
     {
         IRepository<Employee> Employees { get; }
         IRepository<Role> Roles { get; }
-        Task<int> CompleteAsync();
+        Task<IEnumerable<Role>> GetAllRolesAsync();
+        Task<int> CompleteAsync();        
     }
 }
