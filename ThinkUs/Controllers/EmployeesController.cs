@@ -14,10 +14,55 @@ namespace ThinkUs.Controllers
     public class EmployeesController : Controller
     {
         private readonly IUnitOfWork _unitOfWork;
+        private readonly IEmployeeService _employeeService;
 
-        public EmployeesController(IUnitOfWork unitOfWork)
+        public EmployeesController(IUnitOfWork unitOfWork, IEmployeeService employeeService)
         {
             _unitOfWork = unitOfWork;
+            _employeeService = employeeService;
+        }
+
+        [HttpPost("UpdateEmployee")] 
+        public async Task<IActionResult> UpdateEmployee(Employee employee)  
+        {
+            try
+            {
+                var (message, operationExecuted) = await _employeeService.UpdateEmployeeAsync(employee); 
+                if (operationExecuted)
+                {
+                    return Ok(new { Message = message });
+                }
+                else
+                {
+                    return BadRequest(new { Message = message });
+                }
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(new { Message = ex.Message });
+            }
+        }
+
+        // POST: api/employees
+        [HttpPost("CreateEmployee")]
+        public async Task<IActionResult> CreateEmployee(Employee employee)
+        {
+            try
+            {
+                var (message, operationExecuted) = await _employeeService.SaveEmployeeAsync(employee);
+                if (operationExecuted)
+                {
+                    return Ok(new { Message = message });
+                }
+                else
+                {
+                    return BadRequest(new { Message = message });
+                }
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(new { Message = ex.Message });
+            }
         }
 
         // GET: api/employees
@@ -38,21 +83,7 @@ namespace ThinkUs.Controllers
                 return NotFound();
             }
             return Ok(employee);
-        }
-
-        // POST: api/employees
-        [HttpPost("CreateEmployee")]
-        public async Task<ActionResult<Employee>> CreateEmployee(Employee employee)
-        {
-            if (ModelState.IsValid)
-            {
-                await _unitOfWork.Employees.AddAsync(employee);
-                await _unitOfWork.CompleteAsync();
-
-                return CreatedAtAction(nameof(GetEmployee), new { id = employee.Id }, employee);
-            }
-            return BadRequest(ModelState);
-        }
+        }       
 
         // PUT: api/employees/5
         [HttpPut("{id}")]
@@ -76,7 +107,7 @@ namespace ThinkUs.Controllers
             existingEmployee.EmployeeState = employee.EmployeeState;
             existingEmployee.Email = employee.Email;
             existingEmployee.EmployeePassword = employee.EmployeePassword;
-            existingEmployee.RoleId = employee.RoleId;
+            existingEmployee.RolId = employee.RolId;
 
             await _unitOfWork.Employees.UpdateAsync(existingEmployee);
             await _unitOfWork.CompleteAsync();

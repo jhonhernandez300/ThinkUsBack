@@ -9,6 +9,7 @@ using Microsoft.OpenApi.Models;
 using System.Text;
 using FluentAssertions.Common;
 using System.Configuration;
+using ThinkUs.Services;
 //using KontrolarCloud.Middlewares;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -36,6 +37,7 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
 builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
+builder.Services.AddScoped<IEmployeeService, EmployeeService>();
 
 //builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
 //    .AddJwtBearer(options => {

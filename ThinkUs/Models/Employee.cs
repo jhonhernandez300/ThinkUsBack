@@ -11,6 +11,6 @@ namespace ThinkUs.Models
         public required bool EmployeeState { get; set; }
         public required string Email { get; set; }
         public required string EmployeePassword { get; set; }
-        public int? RoleId { get; set; }        
+        public int? RolId { get; set; }        
     }
 }
