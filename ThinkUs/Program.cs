@@ -10,6 +10,8 @@ using System.Text;
 using FluentAssertions.Common;
 using System.Configuration;
 using ThinkUs.Services;
+using KontrolarCloud.Middlewares;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
 //using KontrolarCloud.Middlewares;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -39,28 +41,29 @@ builder.Services.AddSwaggerGen();
 builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
 builder.Services.AddScoped<IEmployeeService, EmployeeService>();
 
-//builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
-//    .AddJwtBearer(options => {
-//        IConfiguration configuration = builder.Configuration;
+builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
+    .AddJwtBearer(options =>
+    {
+        IConfiguration configuration = builder.Configuration;
 
-//        if (configuration != null)
-//        {
-//            options.TokenValidationParameters = new Microsoft.IdentityModel.Tokens.TokenValidationParameters
-//            {
-//                ValidateIssuer = true,
-//                ValidateAudience = true,
-//                ValidateLifetime = true,
-//                ValidateIssuerSigningKey = true,
-//                ValidIssuer = configuration["Jwt:Issuer"],
-//                ValidAudience = configuration["Jwt:Audience"],
-//                IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(configuration["Jwt:Key"]))
-//            };
-//        }
-//        else
-//        {
-//            throw new InvalidOperationException("Configuration is null.");
-//        }
-//    });
+        if (configuration != null)
+        {
+            options.TokenValidationParameters = new Microsoft.IdentityModel.Tokens.TokenValidationParameters
+            {
+                ValidateIssuer = true,
+                ValidateAudience = true,
+                ValidateLifetime = true,
+                ValidateIssuerSigningKey = true,
+                ValidIssuer = configuration["Jwt:Issuer"],
+                ValidAudience = configuration["Jwt:Audience"],
+                IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(configuration["Jwt:Key"]))
+            };
+        }
+        else
+        {
+            throw new InvalidOperationException("Configuration is null.");
+        }
+    });
 
 builder.Services.AddHttpContextAccessor();
 
@@ -80,10 +83,10 @@ app.UseDefaultFiles();
 app.UseStaticFiles();
 app.UseCors("AllowOrigins");
 
-//app.UseMiddleware<TokenValidationMiddleware>();
+app.UseMiddleware<TokenValidationMiddleware>();
 
-//app.UseAuthentication();
-//app.UseAuthorization();
+app.UseAuthentication();
+app.UseAuthorization();
 
 app.MapControllers();
 

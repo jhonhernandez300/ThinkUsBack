@@ -100,6 +100,22 @@
   },
   {
     "ContainingType": "ThinkUs.Controllers.EmployeesController",
+    "Method": "Login",
+    "RelativePath": "api/Employees/Login",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "login",
+        "Type": "ThinkUs.Models.Login",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ThinkUs.Controllers.EmployeesController",
     "Method": "UpdateEmployee",
     "RelativePath": "api/Employees/UpdateEmployee",
     "HttpMethod": "POST",

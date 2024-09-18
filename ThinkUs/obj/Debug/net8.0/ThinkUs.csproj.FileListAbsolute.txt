@@ -136,3 +136,4 @@ C:\Users\jhon\OneDrive\Documentos\Pruebas empresas\ThinkUs\backend\ThinkUs\obj\D
 C:\Users\jhon\OneDrive\Documentos\Pruebas empresas\ThinkUs\backend\ThinkUs\obj\Debug\net8.0\ThinkUs.pdb
 C:\Users\jhon\OneDrive\Documentos\Pruebas empresas\ThinkUs\backend\ThinkUs\obj\Debug\net8.0\ThinkUs.genruntimeconfig.cache
 C:\Users\jhon\OneDrive\Documentos\Pruebas empresas\ThinkUs\backend\ThinkUs\obj\Debug\net8.0\ref\ThinkUs.dll
+C:\Users\jhon\OneDrive\Documentos\Pruebas empresas\ThinkUs\backend\ThinkUs\bin\Debug\net8.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll

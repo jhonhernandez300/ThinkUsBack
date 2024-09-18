@@ -16,6 +16,44 @@ namespace ThinkUs.Services
             _connectionString = configuration.GetConnectionString("DefaultConnection");
         }
 
+        public async Task<(string Message, bool IsValid)> ValidateEmployeeCredentialsAsync(string email, string password)
+        {
+            using (var connection = new SqlConnection(_connectionString))
+            {
+                using (var command = new SqlCommand("[dbo].[ValidateEmployeeCredentials]", connection))
+                {
+                    command.CommandType = CommandType.StoredProcedure;
+
+                    // Añadir los parámetros del SP
+                    command.Parameters.AddWithValue("@Email", email);
+                    command.Parameters.AddWithValue("@EmployeePassword", password);
+
+                    // Parámetros de salida
+                    var messageParam = new SqlParameter("@message", SqlDbType.VarChar, -1)
+                    {
+                        Direction = ParameterDirection.Output
+                    };
+                    command.Parameters.Add(messageParam);
+
+                    var isValidParam = new SqlParameter("@isValid", SqlDbType.Bit)
+                    {
+                        Direction = ParameterDirection.Output
+                    };
+                    command.Parameters.Add(isValidParam);
+
+                    await connection.OpenAsync();
+                    await command.ExecuteNonQueryAsync();
+
+                    // Obtener los valores de los parámetros de salida
+                    var message = (string)messageParam.Value;
+                    var isValid = (bool)isValidParam.Value;
+
+                    return (message, isValid);
+                }
+            }
+        }
+
+
         public async Task<IEnumerable<EmployeeRole>> GetAllEmployeesAsync()
         {
             var employees = new List<EmployeeRole>();

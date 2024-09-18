@@ -1,6 +1,11 @@
-﻿using Microsoft.AspNetCore.Cors;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.IdentityModel.Tokens;
 using System.Collections.Generic;
+using System.IdentityModel.Tokens.Jwt;
+using System.Security.Claims;
+using System.Text;
 using System.Threading.Tasks;
 using ThinkUs.Interfaces;
 using ThinkUs.Models; // Ajusta el espacio de nombres según corresponda
@@ -15,12 +20,14 @@ namespace ThinkUs.Controllers
     {
         private readonly IUnitOfWork _unitOfWork;
         private readonly IEmployeeService _employeeService;
+        public IConfiguration _configuration;
 
-        public EmployeesController(IUnitOfWork unitOfWork, IEmployeeService employeeService)
+        public EmployeesController(IUnitOfWork unitOfWork, IEmployeeService employeeService, IConfiguration configuration)
         {
             _unitOfWork = unitOfWork;
             _employeeService = employeeService;
-        }
+            _configuration = configuration;
+        }       
 
         [HttpPost("UpdateEmployee")] 
         public async Task<IActionResult> UpdateEmployee(Employee employee)  
@@ -41,6 +48,69 @@ namespace ThinkUs.Controllers
             {
                 return BadRequest(new { Message = ex.Message });
             }
+        }
+
+        [HttpPost("Login")]
+        [AllowAnonymous]
+        public async Task<IActionResult> Login([FromBody] Login login)
+        {
+            try
+            {
+                if (login == null)
+                {
+                    return BadRequest(new { message = "El usuario no puede ser nulo." });
+                }
+
+                if (string.IsNullOrWhiteSpace(login.Correo) ||
+                    string.IsNullOrWhiteSpace(login.Password))
+                {
+                    return BadRequest(new { message = "El correo o el password no pueden ser nulos o estar vacíos." });
+                }
+
+                var (message, isValid) = await _employeeService.ValidateEmployeeCredentialsAsync(login.Correo, login.Password);
+                if (!isValid)
+                {                    
+                    return Unauthorized(new { Message = message, IsValid = isValid });
+                }
+
+                var token = GenerateJwtToken(login.Correo, login.Password);
+
+                return Ok(new
+                {
+                    token
+                });
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, new { message = $"Ocurrió un error interno en el servidor: {ex.Message}" });
+            }
+        }
+
+        private string GenerateJwtToken(string correo, string password)
+        {
+            var jwt = _configuration.GetSection("Jwt").Get<Jwt>();
+
+            var claims = new[]
+            {
+                new Claim(JwtRegisteredClaimNames.Sub, jwt.Subject),
+                new Claim(JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString()),
+                new Claim(JwtRegisteredClaimNames.Iat, DateTime.UtcNow.ToString()),
+                new Claim("correo", correo),
+                new Claim("password", password)
+            };
+
+            var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(jwt.Key));
+            var signingCredentials = new SigningCredentials(key, SecurityAlgorithms.HmacSha256);
+
+            var token = new JwtSecurityToken(
+                jwt.Issuer,
+                jwt.Audience,
+                claims,
+                expires: DateTime.Now.AddMinutes(20),
+                signingCredentials: signingCredentials
+            );
+
+            return new JwtSecurityTokenHandler().WriteToken(token);
         }
 
         // POST: api/employees
