@@ -79,6 +79,44 @@ namespace ThinkUs.Controllers
             }
         }
 
+        [HttpGet("ExportEmployeesToCsv")]
+        public async Task<IActionResult> ExportEmployeesToCsv()
+        {
+            try
+            {
+                var employees = await _employeeService.GetAllEmployeesAsync();
+
+                // Genera el contenido CSV
+                var csvContent = GenerateCsv(employees);
+
+                // Nombre del archivo CSV
+                var fileName = $"employees_{DateTime.Now:yyyyMMddHHmmss}.csv";
+
+                // Devuelve el archivo CSV
+                return File(new System.Text.UTF8Encoding().GetBytes(csvContent), "text/csv", fileName);
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(new { Message = ex.Message });
+            }
+        }
+
+        private string GenerateCsv(IEnumerable<EmployeeRole> employees)
+        {
+            var csvBuilder = new System.Text.StringBuilder();
+
+            // Agrega el encabezado
+            csvBuilder.AppendLine("Id,EmployeeName,Position,EmployeeDescription,EmployeeState,Email,RoleId,RoleName");
+
+            // Agrega los datos de cada empleado
+            foreach (var employee in employees)
+            {
+                csvBuilder.AppendLine($"{employee.Id},{employee.EmployeeName},{employee.Position},{employee.EmployeeDescription},{employee.EmployeeState},{employee.Email},{employee.RoleId},{employee.RoleName}");
+            }
+
+            return csvBuilder.ToString();
+        }
+
         // GET: api/employees/5
         [HttpGet("GetEmployee/{id}")]
         public async Task<ActionResult<Employee>> GetEmployee(int id)

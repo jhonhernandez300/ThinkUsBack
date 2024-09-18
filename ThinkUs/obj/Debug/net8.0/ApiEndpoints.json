@@ -54,6 +54,16 @@
   },
   {
     "ContainingType": "ThinkUs.Controllers.EmployeesController",
+    "Method": "ExportEmployeesToCsv",
+    "RelativePath": "api/Employees/ExportEmployeesToCsv",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ThinkUs.Controllers.EmployeesController",
     "Method": "GetAllEmployees",
     "RelativePath": "api/Employees/GetAllEmployees",
     "HttpMethod": "GET",
