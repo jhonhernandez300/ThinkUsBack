@@ -65,12 +65,18 @@ namespace ThinkUs.Controllers
             }
         }
 
-        // GET: api/employees
-        [HttpGet("GetEmployees")]
-        public async Task<ActionResult<IEnumerable<Employee>>> GetEmployees()
+        [HttpGet("GetAllEmployees")]
+        public async Task<IActionResult> GetAllEmployees()
         {
-            var employees = await _unitOfWork.Employees.GetAllAsync();
-            return Ok(employees);
+            try
+            {
+                var employees = await _employeeService.GetAllEmployeesAsync();
+                return Ok(new { employees });
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(new { Message = ex.Message });
+            }
         }
 
         // GET: api/employees/5

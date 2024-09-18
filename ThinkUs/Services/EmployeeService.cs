@@ -16,6 +16,42 @@ namespace ThinkUs.Services
             _connectionString = configuration.GetConnectionString("DefaultConnection");
         }
 
+        public async Task<IEnumerable<EmployeeRole>> GetAllEmployeesAsync()
+        {
+            var employees = new List<EmployeeRole>();
+
+            using (var connection = new SqlConnection(_connectionString))
+            {
+                using (var command = new SqlCommand("[dbo].[GetAllEmployees]", connection))
+                {
+                    command.CommandType = CommandType.StoredProcedure;
+
+                    await connection.OpenAsync();
+
+                    using (var reader = await command.ExecuteReaderAsync())
+                    {
+                        while (await reader.ReadAsync())
+                        {
+                            employees.Add(new EmployeeRole
+                            {
+                                Id = reader.GetInt32(reader.GetOrdinal("Id")),
+                                EmployeeName = reader.GetString(reader.GetOrdinal("EmployeeName")),
+                                Position = reader.GetString(reader.GetOrdinal("Position")),
+                                EmployeeDescription = reader.GetString(reader.GetOrdinal("EmployeeDescription")),
+                                EmployeeState = reader.GetBoolean(reader.GetOrdinal("EmployeeState")),
+                                Email = reader.GetString(reader.GetOrdinal("Email")),
+                                EmployeePassword = reader.GetString(reader.GetOrdinal("EmployeePassword")),
+                                RoleId = reader.IsDBNull(reader.GetOrdinal("RolId")) ? (int?)null : reader.GetInt32(reader.GetOrdinal("RolId")),
+                                RoleName = reader.IsDBNull(reader.GetOrdinal("RoleName")) ? null : reader.GetString(reader.GetOrdinal("RoleName"))
+                            });
+                        }
+                    }
+                }
+            }
+
+            return employees;
+        }
+
         public async Task<(string Message, bool OperationExecuted)> UpdateEmployeeAsync(Employee employee)  
         {
             using (var connection = new SqlConnection(_connectionString))

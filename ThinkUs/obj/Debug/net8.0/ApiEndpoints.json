@@ -54,6 +54,16 @@
   },
   {
     "ContainingType": "ThinkUs.Controllers.EmployeesController",
+    "Method": "GetAllEmployees",
+    "RelativePath": "api/Employees/GetAllEmployees",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ThinkUs.Controllers.EmployeesController",
     "Method": "GetEmployee",
     "RelativePath": "api/Employees/GetEmployee/{id}",
     "HttpMethod": "GET",
@@ -69,26 +79,6 @@
     "ReturnTypes": [
       {
         "Type": "ThinkUs.Models.Employee",
-        "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json"
-        ],
-        "StatusCode": 200
-      }
-    ]
-  },
-  {
-    "ContainingType": "ThinkUs.Controllers.EmployeesController",
-    "Method": "GetEmployees",
-    "RelativePath": "api/Employees/GetEmployees",
-    "HttpMethod": "GET",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [],
-    "ReturnTypes": [
-      {
-        "Type": "System.Collections.Generic.IEnumerable\u00601[[ThinkUs.Models.Employee, ThinkUs, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
         "MediaTypes": [
           "text/plain",
           "application/json",
