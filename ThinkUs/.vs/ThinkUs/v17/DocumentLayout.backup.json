@@ -3,36 +3,12 @@
   "WorkspaceRootPath": "C:\\Users\\jhon\\OneDrive\\Documentos\\Pruebas empresas\\ThinkUs\\backend\\ThinkUs\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{EE9FCE85-0925-4C83-AF66-B7DAC3EB875E}|ThinkUs.csproj|c:\\users\\jhon\\onedrive\\documentos\\pruebas empresas\\thinkus\\backend\\thinkus\\middlewares\\tokenvalidationmiddleware.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EE9FCE85-0925-4C83-AF66-B7DAC3EB875E}|ThinkUs.csproj|solutionrelative:middlewares\\tokenvalidationmiddleware.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{EE9FCE85-0925-4C83-AF66-B7DAC3EB875E}|ThinkUs.csproj|c:\\users\\jhon\\onedrive\\documentos\\pruebas empresas\\thinkus\\backend\\thinkus\\controllers\\employeescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{EE9FCE85-0925-4C83-AF66-B7DAC3EB875E}|ThinkUs.csproj|solutionrelative:controllers\\employeescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{EE9FCE85-0925-4C83-AF66-B7DAC3EB875E}|ThinkUs.csproj|c:\\users\\jhon\\onedrive\\documentos\\pruebas empresas\\thinkus\\backend\\thinkus\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{EE9FCE85-0925-4C83-AF66-B7DAC3EB875E}|ThinkUs.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{EE9FCE85-0925-4C83-AF66-B7DAC3EB875E}|ThinkUs.csproj|c:\\users\\jhon\\onedrive\\documentos\\pruebas empresas\\thinkus\\backend\\thinkus\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EE9FCE85-0925-4C83-AF66-B7DAC3EB875E}|ThinkUs.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{EE9FCE85-0925-4C83-AF66-B7DAC3EB875E}|ThinkUs.csproj|c:\\users\\jhon\\onedrive\\documentos\\pruebas empresas\\thinkus\\backend\\thinkus\\interfaces\\iemployeeservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EE9FCE85-0925-4C83-AF66-B7DAC3EB875E}|ThinkUs.csproj|solutionrelative:interfaces\\iemployeeservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{EE9FCE85-0925-4C83-AF66-B7DAC3EB875E}|ThinkUs.csproj|c:\\users\\jhon\\onedrive\\documentos\\pruebas empresas\\thinkus\\backend\\thinkus\\services\\employeeservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EE9FCE85-0925-4C83-AF66-B7DAC3EB875E}|ThinkUs.csproj|solutionrelative:services\\employeeservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{EE9FCE85-0925-4C83-AF66-B7DAC3EB875E}|ThinkUs.csproj|c:\\users\\jhon\\onedrive\\documentos\\pruebas empresas\\thinkus\\backend\\thinkus\\models\\employeerole.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EE9FCE85-0925-4C83-AF66-B7DAC3EB875E}|ThinkUs.csproj|solutionrelative:models\\employeerole.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{EE9FCE85-0925-4C83-AF66-B7DAC3EB875E}|ThinkUs.csproj|c:\\users\\jhon\\onedrive\\documentos\\pruebas empresas\\thinkus\\backend\\thinkus\\models\\employee.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EE9FCE85-0925-4C83-AF66-B7DAC3EB875E}|ThinkUs.csproj|solutionrelative:models\\employee.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{EE9FCE85-0925-4C83-AF66-B7DAC3EB875E}|ThinkUs.csproj|c:\\users\\jhon\\onedrive\\documentos\\pruebas empresas\\thinkus\\backend\\thinkus\\models\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EE9FCE85-0925-4C83-AF66-B7DAC3EB875E}|ThinkUs.csproj|solutionrelative:models\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -42,7 +18,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 191,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Bookmark",
@@ -50,107 +26,28 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\jhon\\OneDrive\\Documentos\\Pruebas empresas\\ThinkUs\\backend\\ThinkUs\\Program.cs",
-              "RelativeDocumentMoniker": "Program.cs",
-              "ToolTip": "C:\\Users\\jhon\\OneDrive\\Documentos\\Pruebas empresas\\ThinkUs\\backend\\ThinkUs\\Program.cs",
-              "RelativeToolTip": "Program.cs",
-              "ViewState": "AgIAACYAAAAAAAAAAAAiwDsAAAAOAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-18T14:55:52.991Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "appsettings.json",
-              "DocumentMoniker": "C:\\Users\\jhon\\OneDrive\\Documentos\\Pruebas empresas\\ThinkUs\\backend\\ThinkUs\\appsettings.json",
-              "RelativeDocumentMoniker": "appsettings.json",
-              "ToolTip": "C:\\Users\\jhon\\OneDrive\\Documentos\\Pruebas empresas\\ThinkUs\\backend\\ThinkUs\\appsettings.json",
-              "RelativeToolTip": "appsettings.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAiAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2024-09-18T14:55:41.892Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "TokenValidationMiddleware.cs",
-              "DocumentMoniker": "C:\\Users\\jhon\\OneDrive\\Documentos\\Pruebas empresas\\ThinkUs\\backend\\ThinkUs\\Middlewares\\TokenValidationMiddleware.cs",
-              "RelativeDocumentMoniker": "Middlewares\\TokenValidationMiddleware.cs",
-              "ToolTip": "C:\\Users\\jhon\\OneDrive\\Documentos\\Pruebas empresas\\ThinkUs\\backend\\ThinkUs\\Middlewares\\TokenValidationMiddleware.cs",
-              "RelativeToolTip": "Middlewares\\TokenValidationMiddleware.cs",
-              "ViewState": "AgIAAEUAAAAAAAAAAAASwFcAAAAQAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-18T14:55:22.083Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "IEmployeeService.cs",
-              "DocumentMoniker": "C:\\Users\\jhon\\OneDrive\\Documentos\\Pruebas empresas\\ThinkUs\\backend\\ThinkUs\\Interfaces\\IEmployeeService.cs",
-              "RelativeDocumentMoniker": "Interfaces\\IEmployeeService.cs",
-              "ToolTip": "C:\\Users\\jhon\\OneDrive\\Documentos\\Pruebas empresas\\ThinkUs\\backend\\ThinkUs\\Interfaces\\IEmployeeService.cs",
-              "RelativeToolTip": "Interfaces\\IEmployeeService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-17T16:06:43.617Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "Employee.cs",
-              "DocumentMoniker": "C:\\Users\\jhon\\OneDrive\\Documentos\\Pruebas empresas\\ThinkUs\\backend\\ThinkUs\\Models\\Employee.cs",
-              "RelativeDocumentMoniker": "Models\\Employee.cs",
-              "ToolTip": "C:\\Users\\jhon\\OneDrive\\Documentos\\Pruebas empresas\\ThinkUs\\backend\\ThinkUs\\Models\\Employee.cs",
-              "RelativeToolTip": "Models\\Employee.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAvAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-17T13:46:58.217Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
               "Title": "EmployeesController.cs",
               "DocumentMoniker": "C:\\Users\\jhon\\OneDrive\\Documentos\\Pruebas empresas\\ThinkUs\\backend\\ThinkUs\\Controllers\\EmployeesController.cs",
               "RelativeDocumentMoniker": "Controllers\\EmployeesController.cs",
               "ToolTip": "C:\\Users\\jhon\\OneDrive\\Documentos\\Pruebas empresas\\ThinkUs\\backend\\ThinkUs\\Controllers\\EmployeesController.cs",
               "RelativeToolTip": "Controllers\\EmployeesController.cs",
-              "ViewState": "AgIAAE0AAAAAAAAAAAAAAGoAAAAdAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADoAAAAQAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-17T13:23:17.941Z",
+              "WhenOpened": "2024-09-18T17:34:58.929Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "EmployeeRole.cs",
-              "DocumentMoniker": "C:\\Users\\jhon\\OneDrive\\Documentos\\Pruebas empresas\\ThinkUs\\backend\\ThinkUs\\Models\\EmployeeRole.cs",
-              "RelativeDocumentMoniker": "Models\\EmployeeRole.cs",
-              "ToolTip": "C:\\Users\\jhon\\OneDrive\\Documentos\\Pruebas empresas\\ThinkUs\\backend\\ThinkUs\\Models\\EmployeeRole.cs",
-              "RelativeToolTip": "Models\\EmployeeRole.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAFAAAAAAAAAA==",
+              "DocumentIndex": 1,
+              "Title": "Login.cs",
+              "DocumentMoniker": "C:\\Users\\jhon\\OneDrive\\Documentos\\Pruebas empresas\\ThinkUs\\backend\\ThinkUs\\Models\\Login.cs",
+              "RelativeDocumentMoniker": "Models\\Login.cs",
+              "ToolTip": "C:\\Users\\jhon\\OneDrive\\Documentos\\Pruebas empresas\\ThinkUs\\backend\\ThinkUs\\Models\\Login.cs",
+              "RelativeToolTip": "Models\\Login.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-17T23:41:47.387Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "EmployeeService.cs",
-              "DocumentMoniker": "C:\\Users\\jhon\\OneDrive\\Documentos\\Pruebas empresas\\ThinkUs\\backend\\ThinkUs\\Services\\EmployeeService.cs",
-              "RelativeDocumentMoniker": "Services\\EmployeeService.cs",
-              "ToolTip": "C:\\Users\\jhon\\OneDrive\\Documentos\\Pruebas empresas\\ThinkUs\\backend\\ThinkUs\\Services\\EmployeeService.cs",
-              "RelativeToolTip": "Services\\EmployeeService.cs",
-              "ViewState": "AgIAABIAAAAAAAAAAAAAACkAAAA5AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-17T13:21:45.87Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-09-18T17:06:57.434Z"
             }
           ]
         }
